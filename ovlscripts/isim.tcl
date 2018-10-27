@@ -1,0 +1,2 @@
+wave add /
+run all

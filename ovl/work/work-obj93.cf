@@ -1,0 +1,7 @@
+v 4
+file "/Users/chadb/src/vhdl/Doulos/Expert_vhdl/expertVHDL_design/ex06/ovl/" "countertb.vhd" "4688a965d54f74cf6bd7f4468999031c03d176c7" "20181020172138.124":
+  entity countertb at 2( 35) + 0 on 17;
+  architecture bench of countertb at 9( 173) + 0 on 18;
+file "/Users/chadb/src/vhdl/Doulos/Expert_vhdl/expertVHDL_design/ex06/ovl/" "counter.vhd" "d592635132b935635d36c7b6244e3d1fd76cafe5" "20181020161600.484":
+  entity counter at 3( 34) + 0 on 11;
+  architecture rtl of counter at 13( 279) + 0 on 12;

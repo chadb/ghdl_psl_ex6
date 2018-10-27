@@ -1,0 +1,14 @@
+#! /bin/sh
+
+mkdir accellera_ovl_vhdl
+ghdl -a --std=93 --work=accellera_ovl_vhdl --workdir=accellera_ovl_vhdl \
+  ../../std_ovl/std_ovl.vhd \
+  ../../std_ovl/std_ovl_procs.vhd \
+  ../../std_ovl/std_ovl_clock_gating.vhd \
+  ../../std_ovl/std_ovl_reset_gating.vhd \
+  ../../std_ovl/ovl_*.vhd \
+  ../../std_ovl/vhdl93/ovl_*_rtl.vhd \
+  ../../std_ovl/std_ovl_components.vhd
+
+mkdir work
+ghdl -a --std=93 -Paccellera_ovl_vhdl --workdir=work counter.vhd countertb.vhd 
