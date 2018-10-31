@@ -1,6 +1,9 @@
 cds.lib
 countertb
-e~countertb.o
+*.o
 hdl.var
 work-obj93.cf
 work/
+lib/
+accellera_ovl_vhdl/
+counter_ovl_tb
