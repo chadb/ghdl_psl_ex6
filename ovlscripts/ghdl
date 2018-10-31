@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# ok this mf script doesn't work unless I remove all --work and --workdir
+# args.  This sucks!
+
+
+ovlInstallPath="../std_ovl"
+
+mkdir -p accellera_ovl_vhdl
+ghdl -a --std=93 --work=accellera_ovl_vhdl  --workdir=accellera_ovl_vhdl ${ovlInstallPath}/std_ovl.vhd ${ovlInstallPath}/std_ovl_procs.vhd  ${ovlInstallPath}/std_ovl_clock_gating.vhd  ${ovlInstallPath}/std_ovl_reset_gating.vhd  ${ovlInstallPath}/ovl_*.vhd  ${ovlInstallPath}/vhdl93/ovl_*_rtl.vhd  ${ovlInstallPath}/std_ovl_components.vhd
+
+mkdir -p work
+ghdl -a --std=93 --workdir=work --work=work -Paccellera_ovl_vhdl counter.vhd counter_ovl_tb.vhd
+ghdl -e --std=93 --workdir=work --work=work -Paccellera_ovl_vhdl counter_ovl_tb
+ghdl -r --workdir=work --work=work -Paccellera_ovl_vhdl counter_ovl_tb
