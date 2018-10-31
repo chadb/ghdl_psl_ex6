@@ -43,7 +43,7 @@ begin
 
 --psl default clock is rising_edge(clk);
 
---psl property up   is always (UpDn and Enable and not Load     -> next Cnt = previous_cnt + 1) abort Reset;
+--psl property up   is always (UpDn and Enable and not Load     -> next Cnt = previous_cnt - 1) abort Reset;
 --psl property down is always (not UpDn and Enable and not Load -> next Cnt = previous_cnt - 1) abort Reset;
 --psl property ld   is always (Enable and Load                  -> next Cnt = previous_uData ) abort Reset;
 --psl property nul  is always (not Enable                       -> next Cnt = previous_cnt   ) abort Reset;
